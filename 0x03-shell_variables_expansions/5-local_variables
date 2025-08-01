@@ -1,2 +1,2 @@
 #!/bin/bash
-paste <(declare -p) <(printenv) <(declare -F) | awk '!/^$/{print $0}'
+set$'\n'declare -f
