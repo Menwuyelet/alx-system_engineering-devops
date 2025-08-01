@@ -1,2 +1,2 @@
 #!/bin/bash
-paste <(compgen -v) <(compgen -e) <(compgen -A function) | tr '\t' '\n' | grep -v '^$' | sort -u
+paste <(declare -p) <(printenv) <(declare -F) | awk '!/^$/{print $0}'
