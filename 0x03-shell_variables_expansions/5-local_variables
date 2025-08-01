@@ -1,2 +1,2 @@
 #!/bin/bash
-(compgen -v && compgen -e && compgen -A function) | sort -u
+paste <(compgen -v) <(compgen -e) <(compgen -A function) | tr '\t' '\n' | grep -v '^$' | sort -u
