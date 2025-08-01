@@ -1,2 +1,2 @@
 #!/bin/bash
-set$'\n'declare -f
+paste <(compgen -v) <(compgen -e) <(compgen -A function) | tr '\t' '\n' | grep -v '^$' | sort -
