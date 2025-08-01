@@ -1,2 +1,2 @@
 #!/bin/bash
-find /your/path -maxdepth 1 -type d | wc -l
+echo "$PATH" | tr ':' '\n' | while read dir; do [ -d "$dir" ] && echo; done | wc -l
