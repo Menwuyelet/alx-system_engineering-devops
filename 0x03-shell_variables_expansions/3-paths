@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$PATH" | tr ':' '\n' | while read dir; do [ -d "$dir" ] && echo; done | wc -l
+tr ':' '\n' <<<"$PATH" | grep -c '[^[:space:]]'
