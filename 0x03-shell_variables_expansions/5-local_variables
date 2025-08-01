@@ -1,2 +1,2 @@
 #!/bin/bash
-set$'\n'declare -f
+printf '%s\n%s\n' "$(set)" "$(declare -f)"
