@@ -1,2 +1,2 @@
 #!/bin/bash
-printf '%s\n%s\n%s\n%s\n%s\n%s\n' "for i in {a..z}{a..z}" "do" "if [ \"\$i\" != \"oo\" ]" "then" "echo \"\$i\"" "fi; done" | bash
+echo {a..z}{a..z} | tr " " "\n" | grep -v "oo"
